@@ -16,6 +16,9 @@ header ul li {
     flex: 1;
     border: 1px solid black;
     padding: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
     &.li_maior {
         flex: 3;
     }
@@ -33,7 +36,6 @@ header ul a {
 header ul .a_conta {
     display: flex;
     align-items: center;
-    justify-content: center;
     &:hover {
         text-decoration: none;
     }
@@ -46,6 +48,34 @@ header a .material-symbols-outlined {
     }
 }
 
-label {
+label.lbl_pesquisa {
     display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    transition: .4s;
+    background-color: rgb(235, 235, 235);
+    padding: 7px;
+    border-radius: 20px;
+}
+
+label.lbl_pesquisa input {
+    padding: 5px;
+    background-color: transparent;
+    border: 0;
+    outline: 0;
+    font-size: 0.9em;
+    width: 175px;
+    transition: .4s;
+}
+
+label.lbl_pesquisa ::placeholder {
+    color: black;
+    opacity: 1;
+}
+
+label.lbl_pesquisa:not(:focus-within) input {
+    width: 0;
+    border: 0;
+    padding: 0;
 }
