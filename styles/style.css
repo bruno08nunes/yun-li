@@ -5,6 +5,7 @@
     padding: 0;
     box-sizing: border-box;
     list-style-type: none;
+    scroll-behavior: smooth;
 }
 
 :root {
@@ -13,7 +14,7 @@
 }
 
 body {
-    background-image: url(../assets/img-background.jpg);
+    background-image: url(../assets/images/img-background.jpg);
     background-position: center center;
 }
 
@@ -22,6 +23,7 @@ body {
     position: sticky;
     top: 0;
     background-color: white;
+    z-index: 3;
 }
 
 .header-principal ul {
@@ -51,10 +53,10 @@ body {
     outline: 0;
     background-color: transparent;
     cursor: pointer;
-
+    
     display: flex;
     align-items: center;
-
+    
     & .material-symbols-outlined {
         font-size: 3.5em;
     }
@@ -120,13 +122,14 @@ label.lbl_pesquisa:not(:focus-within) input {
 
 .sidebar {
     --altura: calc(100svh - 70px);
-
+    
     max-width: 200px;
     background-color: var(--cor-fundo);
     border-right: 2px solid black;
     font-size: 1.9em;
     height: var(--altura);
-
+    z-index: 2;
+    
     animation: sidebar-aparecer .8s ease-out;
     position: fixed;
     top: 70px;
@@ -247,6 +250,7 @@ label.lbl_pesquisa:not(:focus-within) input {
     background-color: var(--cor-fundo);
     width: 90vw;
     overflow: hidden;
+    border: 1px solid black;
 }
 
 .section-primaria {
@@ -256,7 +260,9 @@ label.lbl_pesquisa:not(:focus-within) input {
 .section-primaria article {
     flex: 1;
     padding: 25px;
-    font-size: clamp(1.3em, 2vw, 2em);
+    & h2 {
+        font-size: clamp(2em, 2vw, 2.8em);
+    }
 }
 
 .article-albuns div {
@@ -274,6 +280,10 @@ label.lbl_pesquisa:not(:focus-within) input {
     }
 }
 
+.article-albuns a:not([href^="https://"]) {
+    cursor: not-allowed;
+}
+
 .article-albuns img {
     width: 100%;
     height: 100%;
@@ -287,7 +297,8 @@ label.lbl_pesquisa:not(:focus-within) input {
 /* Artigo Resumo */
 
 .article-resumo {
-    border-left: 1px solid black;
+    border: 0px solid black;
+    border-left-width: 1px;
 }
 
 .div-titulo {
@@ -295,6 +306,7 @@ label.lbl_pesquisa:not(:focus-within) input {
     align-items: center;
     justify-content: center;
     gap: 25px;
+    margin-bottom: 25px;
 }
 
 .logo-yun-li {
@@ -304,7 +316,7 @@ label.lbl_pesquisa:not(:focus-within) input {
 }
 
 .article-resumo p {
-    font-size: 0.7em;
+    font-size: clamp(0.9em, 1.3vw, 1.3em);
     text-indent: 20px;
     margin-bottom: 15px;
     line-height: 1.3em;
