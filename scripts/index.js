@@ -13,3 +13,6 @@ window.addEventListener("resize", e => {
         inserirAlbuns() 
     } 
 });
+
+const backdrop = document.querySelector(".backdrop");
+backdrop.addEventListener("click", abrirMenu);
