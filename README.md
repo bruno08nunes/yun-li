@@ -5,9 +5,7 @@
 ### Requisitos: 
 <ul>
  <li>Responsividade - O site pode ser acessado em diversos dispositivos diferentes;</li>
- <li>Página para a criação de contas (não funcional);</li>
- <li>Poder pesquisar alguma informação no site;</li>
- <li>Escolher álbuns aleatórias para destacar.</li>
+ <li>Página para a criação de contas (não funcional).</li>
 </ul>
 
 ### Linguagens usadas:
@@ -19,5 +17,6 @@
 
 ### Imagens:
 Site ainda não criado
+![image](https://github.com/bruno08nunes/yun-li/assets/139359503/44a15ddc-d9cc-4ab3-9be3-2e7381bc4f56)
 
 Link para o site: <a href="https://bruno08nunes.github.io/yun-li/">Yun Li</a>
