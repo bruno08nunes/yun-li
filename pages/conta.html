@@ -1,21 +1,25 @@
 <!DOCTYPE html>
 <html lang="pt-br">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <base href="../">
 
     <title>Yun Li</title>
+    <link rel="shortcut icon" href="assets/images/favicon.ico" type="image/x-icon">
 
     <!-- Arquivos CSS -->
-    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,400,0,0" />
+    <link rel="stylesheet"
+        href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,400,0,0" />
     <!-- Meus CSS -->
-    <link rel="stylesheet" href="estilos/style.css">
-    <link rel="stylesheet" href="estilos/media-queries.css">
+    <link rel="stylesheet" href="styles/style.css">
+    <link rel="stylesheet" href="styles/media-queries.css">
 
     <!-- Arquivos JS -->
     <script type="module" src="scripts/index.js"></script>
 </head>
+
 <body>
     <header class="header-principal">
         <nav>
@@ -30,8 +34,10 @@
                 <li><a href="index.html#home">Home</a></li>
                 <li><a href="index.html#noticias">Notícias</a></li>
                 <li><a href="index.html#biografia">Biografia</a></li>
-                <li class="li_maior"><a href="https://open.spotify.com/intl-pt/artist/6ab8tnQvr8sXXIpSZCrbQs" target="_blank">Yung Lixo</a></li>
-                <li><a href="paginas/conta.html" class="a_conta"><span class="material-symbols-outlined">account_circle</span></a></li>
+                <li class="li_maior"><a href="https://open.spotify.com/intl-pt/artist/6ab8tnQvr8sXXIpSZCrbQs"
+                        target="_blank">Yun Li</a></li>
+                <li><a href="pages/conta.html" class="a_conta"><span
+                            class="material-symbols-outlined">account_circle</span></a></li>
                 <li class="li_pesquisa">
                     <label for="pesquisa" class="lbl_pesquisa">
                         <span class="material-symbols-outlined">search</span>
@@ -48,14 +54,14 @@
                 <li><a href="index.html#home">Home</a></li>
                 <li><a href="index.html#noticias">Notícias</a></li>
                 <li><a href="index.html#biografia">Biografia</a></li>
-                <li>
+                <li class="li-pesquisa-sidebar">
                     <label for="pesquisa_sidebar" class="lbl_pesquisa_sidebar">
                         <span class="material-symbols-outlined">search</span>
                         <input type="text" name="pesquisa_sidebar" id="pesquisa_sidebar" placeholder="Pesquisar...">
                     </label>
                 </li>
                 <li>
-                    <a href="paginas/conta.html" class="a_conta">
+                    <a href="pages/conta.html" class="a_conta">
                         <span class="material-symbols-outlined">account_circle</span>
                         <span>Criar Conta</span>
                     </a>
@@ -63,5 +69,61 @@
             </ul>
         </nav>
     </aside>
+
+    <div class="backdrop d-none"></div>
+
+    <main class="main-formulario">
+        <fieldset>
+            <h2>Formulário de Cadastro</h2>
+            <form>
+                <div>
+                    <label for="nome">Nome: </label>
+                    <input type="text" name="nome" id="nome" placeholder="Nome Completo" autocomplete="name">
+                </div>
+                <div>
+                    <label for="senha">Senha: </label>
+                    <input type="password" name="senha" id="senha" placeholder="Senha" autocomplete="current-password">
+                </div>
+                <div>
+                    <label for="email">Email: </label>
+                    <input type="email" name="email" id="email" placeholder="Email@email.com" autocomplete="email">
+                </div>
+                <div>
+                    <label for="nascimento">Data de Nascimento: </label>
+                    <input type="date" name="nascimento" id="nascimento" autocomplete="bday">
+                </div>
+                <div>
+                    <label for="cep">CEP: </label>
+                    <input type="text" name="cep" id="cep" placeholder="XXXXX-XXX" autocomplete="off">
+                </div>
+                <div>
+                    <label for="pais">País: </label>
+                    <input type="text" name="pais" id="pais" placeholder="País" autocomplete="country-name">
+                </div>
+                <button type="submit">Enviar</button>
+            </form>
+        </fieldset>
+    </main>
+
+    <footer>
+        <div class="div-dados">
+            <img src="assets/images/img-EU.png" alt="Desenho representando Bruno Nunes feito por Isabelle Scholl">
+            <div>
+                <h2>Bruno Nunes</h2>
+                <p>
+                    Estudante do Senac de 16 anos. Criador desse e de muitos outros sites, disponíveis em: 
+                    <a href="https://github.com/bruno08nunes" target="_blank">
+                        bruno08nunes 
+                        <svg xmlns="http://www.w3.org/2000/svg" height="16" width="15.5" viewBox="0 0 496 512"><path d="M165.9 397.4c0 2-2.3 3.6-5.2 3.6-3.3 .3-5.6-1.3-5.6-3.6 0-2 2.3-3.6 5.2-3.6 3-.3 5.6 1.3 5.6 3.6zm-31.1-4.5c-.7 2 1.3 4.3 4.3 4.9 2.6 1 5.6 0 6.2-2s-1.3-4.3-4.3-5.2c-2.6-.7-5.5 .3-6.2 2.3zm44.2-1.7c-2.9 .7-4.9 2.6-4.6 4.9 .3 2 2.9 3.3 5.9 2.6 2.9-.7 4.9-2.6 4.6-4.6-.3-1.9-3-3.2-5.9-2.9zM244.8 8C106.1 8 0 113.3 0 252c0 110.9 69.8 205.8 169.5 239.2 12.8 2.3 17.3-5.6 17.3-12.1 0-6.2-.3-40.4-.3-61.4 0 0-70 15-84.7-29.8 0 0-11.4-29.1-27.8-36.6 0 0-22.9-15.7 1.6-15.4 0 0 24.9 2 38.6 25.8 21.9 38.6 58.6 27.5 72.9 20.9 2.3-16 8.8-27.1 16-33.7-55.9-6.2-112.3-14.3-112.3-110.5 0-27.5 7.6-41.3 23.6-58.9-2.6-6.5-11.1-33.3 2.6-67.9 20.9-6.5 69 27 69 27 20-5.6 41.5-8.5 62.8-8.5s42.8 2.9 62.8 8.5c0 0 48.1-33.6 69-27 13.7 34.7 5.2 61.4 2.6 67.9 16 17.7 25.8 31.5 25.8 58.9 0 96.5-58.9 104.2-114.8 110.5 9.2 7.9 17 22.9 17 46.4 0 33.7-.3 75.4-.3 83.6 0 6.5 4.6 14.4 17.3 12.1C428.2 457.8 496 362.9 496 252 496 113.3 383.5 8 244.8 8zM97.2 352.9c-1.3 1-1 3.3 .7 5.2 1.6 1.6 3.9 2.3 5.2 1 1.3-1 1-3.3-.7-5.2-1.6-1.6-3.9-2.3-5.2-1zm-10.8-8.1c-.7 1.3 .3 2.9 2.3 3.9 1.6 1 3.6 .7 4.3-.7 .7-1.3-.3-2.9-2.3-3.9-2-.6-3.6-.3-4.3 .7zm32.4 35.6c-1.6 1.3-1 4.3 1.3 6.2 2.3 2.3 5.2 2.6 6.5 1 1.3-1.3 .7-4.3-1.3-6.2-2.2-2.3-5.2-2.6-6.5-1zm-11.4-14.7c-1.6 1-1.6 3.6 0 5.9 1.6 2.3 4.3 3.3 5.6 2.3 1.6-1.3 1.6-3.9 0-6.2-1.4-2.3-4-3.3-5.6-2z"/></svg>
+                    </a>
+                </p>
+            </div>
+        </div>
+        <div>
+            <h2>Copyright</h2>
+            <p>Imagens produzidas por Yun Li, Will.png e Isabelle Scholl.</p>
+        </div>
+    </footer>
 </body>
+
 </html>

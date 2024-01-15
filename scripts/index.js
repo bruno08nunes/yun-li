@@ -9,8 +9,9 @@ window.addEventListener("resize", menuResize);
 inserirAlbuns();
 
 window.addEventListener("resize", e => { 
-    if (window.innerWidth > 576 && document.querySelector("figure:nth-child(4) img").src === "http://127.0.0.1:5500/index.html") { 
+    if (window.innerWidth > 576 && !(document.querySelector("figure:nth-child(4) img").src.endsWith("jpg"))) { 
         inserirAlbuns() 
+        console.log(document.querySelector("figure:nth-child(4) img").src)
     } 
 });
 
