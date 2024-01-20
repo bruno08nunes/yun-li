@@ -19,14 +19,11 @@ body {
     min-height: 100vh;
     background-color: #ddd9d9;
 
+    background-position: center center;
+    background-image: url(../assets/images/img-background.jpg);
     &.parado {
         overflow: hidden;
     }
-}
-
-.body_principal {
-    background-image: url(../assets/images/img-background.jpg);
-    background-position: center center;
 }
 
 /* ! Cabeçalho */
@@ -508,7 +505,6 @@ footer a {
 /*! Formulário */
 
 .main-formulario {
-    background-image: linear-gradient(254deg, rgb(240, 96, 181) 0%, 14.7912%, rgb(199, 84, 153) 29.5824%, 64.7912%, rgb(155, 93, 230) 100%);
     display: flex;
     justify-content: center;
     align-items: center;
@@ -547,6 +543,7 @@ form {
     width: 70vw;
     display: flex;
     gap: 30px;
+    align-items: center;
 
     & input {
         font-size: 0.8em;
